@@ -19,7 +19,7 @@ app.all('*', (req, res, next) => {
   res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT, OPTIONS, HEAD');
   res.header('Access-Control-Allow-Headers', 'content-type');
   if (req.method === 'OPTIONS') {
-    res.send(200);
+    res.sendStatus(200);
   } else {
     next();
   }
